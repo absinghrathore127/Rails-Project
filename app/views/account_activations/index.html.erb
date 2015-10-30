@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Account Activations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_activations.each do |account_activation| %>
+      <tr>
+        <td><%= link_to 'Show', account_activation %></td>
+        <td><%= link_to 'Edit', edit_account_activation_path(account_activation) %></td>
+        <td><%= link_to 'Destroy', account_activation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account activation', new_account_activation_path %>
